@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "CultureAI Password Monitor (Test)",
+  "version": "1.0.0",
+  "description": "Mock extension for testing password detection functionality",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://doesnotexist.culture.ai/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
